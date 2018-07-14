@@ -1,0 +1,62 @@
+.heading-primary {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.8rem; }
+
+* {
+  box-sizing: border-box;
+  padding: 0; }
+
+.messanger {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .messanger__header {
+    display: flex; }
+    .messanger__header__left {
+      padding: 2rem;
+      width: 15%; }
+    .messanger__header__content {
+      width: 65%;
+      text-transform: capitalize;
+      font-weight: 700;
+      padding: 2rem;
+      text-align: center; }
+    .messanger__header__right {
+      padding: 1rem 2rem;
+      width: 20%; }
+      .messanger__header__right .user-profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+        .messanger__header__right .user-profile__name {
+          padding-right: 1rem; }
+        .messanger__header__right .user-profile__image {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          background-color: #eee; }
+  .messanger__main {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    height: 100%; }
+  .messanger__sidebar-left {
+    background-color: blue;
+    width: 15%; }
+  .messanger__content {
+    margin-right: auto; }
+  .messanger__sidebar-right {
+    background-color: pink;
+    width: 20%; }

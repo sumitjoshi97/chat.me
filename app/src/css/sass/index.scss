@@ -1,0 +1,82 @@
+@import "./variables.scss";
+@import "./typography.scss";
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $base-font;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.messanger {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    &__header {
+        // background-color: red;
+        display: flex;
+        &__left{
+            padding: 2rem;
+            width: 15%;
+        }
+
+        &__content {
+            width: 65%;
+            text-transform: capitalize;
+            font-weight: 700;
+            padding: 2rem;
+            text-align: center;   
+        }
+
+        &__right {
+            padding: 1rem 2rem;
+            width: 20%;
+            // display: flex;
+            // align-items: center;
+            .user-profile {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                &__name{
+                    padding-right: 1rem;
+                }
+
+                &__image { 
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    background-color: #eee;
+                    // align-content: stretch;
+                }
+            }
+        }
+    }
+    &__main {
+        background-color: green;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+    &__sidebar-left{
+        background-color: blue;
+        width: 15%;
+    }
+    &__content {
+        margin-right: auto;
+    }
+    &__sidebar-right {
+        background-color: pink;
+        width: 20%;
+    }
+}
