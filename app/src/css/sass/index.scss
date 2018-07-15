@@ -1,137 +1,218 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 @import "./variables.scss";
 @import "./typography.scss";
 body,
 html {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: $base-font;
-    font-family: 'Open Sans', sans-serif;
-    color: $color-body;
+  font-size: $base-font;
+  font-family: "Open Sans", sans-serif;
+  color: $color-body;
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .messanger {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+
+  &__header {
+    background-color: #df2323;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-    &__header {
-        background-color: #df2323;
-        display: flex;
-        flex-direction: row;
-        line-height: $header-height; // border-bottom: 0.2px solid $border-color;
-        &__left {
-            // padding: 2rem;
-            width: $sidebar-left-width;
-            &__actions {
-                line-height: $header-height;
-                padding: 0 1.4rem;
-                button {
-                    padding: 0.4rem;
-                    background-color: #fff;
-                    border: none;
-                    border-radius: 0.2rem;
-                }
-            }
+    flex-direction: row;
+    line-height: $header-height;
+
+    &__left {
+      // padding: 2rem;
+      width: $sidebar-left-width;
+      &__actions {
+        line-height: $header-height;
+        padding: 0 1.4rem;
+        button {
+          padding: 0.4rem;
+          background-color: #fff;
+          border: none;
+          border-radius: 0.2rem;
         }
-        &__content {
-            // width: 65%;
-            flex-grow: 1;
-            h2 {
-                line-height: $header-height;
-                text-align: center;
-                color: $color-white;
-            }
-        }
-        &__right {
-            width: $sidebar-right-width;
-            line-height: $header-height;
-            .user-profile {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                &__name {
-                    padding-right: 1rem;
-                }
-                &__image {
-                    line-height: $header-height;
-                    img {
-                        width: 3rem;
-                        height: 3rem;
-                        border-radius: 50%;
-                        margin: 1rem 1rem 0 0;
-                        background-color: #eee;
-                    } // align-content: stretch;
-                }
-            }
-        }
-    }
-    &__main {
-        // background-color: green;
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-    }
-    &__sidebar-left {
-        width: $sidebar-left-width;
-        border-right: 0.2px solid $border-color;
-        background-color: $color-secondary;
+      }
     }
     &__content {
-        // margin-right: auto;
-        flex-grow: 1;
-        padding: 2rem;
-        overflow-y: auto;
-        &__messages {
-            display: flex;
-            flex-direction: column;
-            &__message {
-                display: flex;
-                margin: 2rem 1rem 0 1rem;
-                &-image {
-                    padding-right: 1rem;
-                    img {
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 50%;
-                    }
-                }
-                &-body {
-                    &--text {
-                        background-color: $color-secondary;
-                        padding: 1rem;
-                        border-radius: 1.5rem;
-                        margin-top: 0.5rem;
-                    }
-                }
-            }
-            &__message-self {
-                justify-content: flex-end;
-                .messanger__content__messages__message-body {
-                    &--text {
-                        background-color: $color-primary;
-                    }
-                }
-            }
+      // width: 65%;
+      flex-grow: 1;
+      h2 {
+        line-height: $header-height;
+        text-align: center;
+        color: $color-white;
+      }
+    }
+    &__right {
+      width: $sidebar-right-width;
+      line-height: $header-height;
+      .user-profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &__name {
+          padding-right: 1rem;
         }
+        &__image {
+          line-height: $header-height;
+          img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin: 1rem 1rem 0 0;
+            background-color: #eee;
+          } // align-content: stretch;
+        }
+      }
     }
-    &__sidebar-right {
-        width: $sidebar-right-width;
-        border-left: 0.2px solid $border-color;
-        background-color: $color-secondary;
+  }
+  &__main {
+    // background-color: green;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  &__sidebar-left {
+    width: $sidebar-left-width;
+    border-right: 0.2px solid $border-color;
+    background-color: $color-secondary;
+  }
+  &__content {
+    // margin-right: auto;
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    &__messages {
+      display: flex;
+      flex-direction: column;
+      &__message {
+        display: flex;
+        margin: 2rem 1rem 0 1rem;
+        &-image {
+          padding-right: 1rem;
+          img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+          }
+        }
+        &-body {
+          &--text {
+            background-color: $color-secondary;
+            padding: 1rem;
+            border-radius: 1.5rem;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+      &__message-self {
+        justify-content: flex-end;
+        .messanger__content__messages__message-body {
+          &--text {
+            background-color: $color-primary;
+          }
+        }
+      }
     }
+  }
+  &__input {
+    // position: fixed;
+    // bottom: 0;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem;
+    background-color: $color-white;
+    &__text {
+      flex-grow: 1;
+      margin-right: auto;
+      input {
+        padding: 0.8rem 1rem;
+        font-size: $base-font;
+        width: 100%;
+        border: 1px solid $border-color;
+        border-radius: 5rem;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+    &__actions {
+      &__send {
+        font-size: $base-font;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 2rem;
+        color: $color-white;
+        padding: 0.8rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__sidebar-right {
+    width: $sidebar-right-width;
+    border-left: 0.2px solid $border-color;
+    background-color: $color-secondary;
+
+    h2 {
+      padding: 1rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.channels {
+  &__channel {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.3px solid $border-color;
+  }
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.3px solid $border-color;
+  &__member {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.user-image {
+  padding-right: 1rem;
+  img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}
+
+.user-info {
+  flex-grow: 1;
+  h2 {
+    font-size: $base-font;
+    font-weight: 600;
+  }
 }

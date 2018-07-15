@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 1.4rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #2c3e50; }
 
 * {
@@ -73,7 +73,7 @@ body {
   .messanger__sidebar-left {
     width: 20rem;
     border-right: 0.2px solid rgba(0, 0, 0, 0.329);
-    background-color: #eeeeee; }
+    background-color: #f3f3f3; }
   .messanger__content {
     flex-grow: 1;
     padding: 2rem;
@@ -91,7 +91,7 @@ body {
             height: 2rem;
             border-radius: 50%; }
         .messanger__content__messages__message-body--text {
-          background-color: #eeeeee;
+          background-color: #f3f3f3;
           padding: 1rem;
           border-radius: 1.5rem;
           margin-top: 0.5rem; }
@@ -99,7 +99,65 @@ body {
         justify-content: flex-end; }
         .messanger__content__messages__message-self .messanger__content__messages__message-body--text {
           background-color: #2ecc71; }
+  .messanger__input {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem;
+    background-color: #fff; }
+    .messanger__input__text {
+      flex-grow: 1;
+      margin-right: auto; }
+      .messanger__input__text input {
+        padding: 0.8rem 1rem;
+        font-size: 1.4rem;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.329);
+        border-radius: 5rem; }
+        .messanger__input__text input:focus, .messanger__input__text input:active {
+          outline: none; }
+    .messanger__input__actions__send {
+      font-size: 1.4rem;
+      background-color: #2ecc71;
+      border: none;
+      border-radius: 2rem;
+      color: #fff;
+      padding: 0.8rem;
+      margin-left: 1rem; }
   .messanger__sidebar-right {
     width: 30rem;
     border-left: 0.2px solid rgba(0, 0, 0, 0.329);
-    background-color: #eeeeee; }
+    background-color: #f3f3f3; }
+    .messanger__sidebar-right h2 {
+      padding: 1rem;
+      padding-bottom: 0; }
+
+.channels__channel {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.329); }
+
+.members {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.329); }
+  .members__member {
+    display: flex;
+    flex-direction: row; }
+
+.user-image {
+  padding-right: 1rem; }
+  .user-image img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%; }
+
+.user-info {
+  flex-grow: 1; }
+  .user-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600; }

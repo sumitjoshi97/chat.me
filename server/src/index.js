@@ -8,7 +8,7 @@ import WebSocketServer from 'uws';
 const app = express();
 app.server = http.createServer(app);
 
-app.use(morgan);
+// app.use(morgan);
 
 app.use(cors({
     exposedHeaders: "*"
