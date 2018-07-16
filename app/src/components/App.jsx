@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
 
       <div className="app">
-        {console.log(store)}
+        {/* {console.log(store)} */}
         <Messanger store={store}/>
       </div>
     )

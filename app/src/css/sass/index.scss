@@ -92,6 +92,7 @@ body {
     width: $sidebar-left-width;
     border-right: 0.2px solid $border-color;
     background-color: $color-secondary;
+    overflow-y: auto;
   }
   &__content {
     // margin-right: auto;
@@ -171,7 +172,7 @@ body {
     width: $sidebar-right-width;
     border-left: 0.2px solid $border-color;
     background-color: $color-secondary;
-
+    overflow-y: auto;
     h2 {
       padding: 1rem;
       padding-bottom: 0;
