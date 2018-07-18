@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@font-face {
+  font-family: "untitled-font-1";
+  src: url("../font/fonts/untitled-font-1.eot");
+  src: url("../font/fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"), url("../font/fonts/untitled-font-1.woff") format("woff"), url("../font/fonts/untitled-font-1.ttf") format("truetype"), url("../font/fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-edit-modify-streamline:before {
+  content: "\61"; }
+
+.icon-settings:before {
+  content: "\62"; }
+
+.icon-paperplane:before {
+  content: "\63"; }
+
 .heading-primary {
   font-size: 2rem;
   padding: 0;
@@ -42,7 +82,8 @@ body {
           padding: 0.4rem;
           background-color: #fff;
           border: none;
-          border-radius: 0.2rem; }
+          border-radius: 0.2rem;
+          margin: 0 0.4rem; }
     .messanger__header__content {
       flex-grow: 1; }
       .messanger__header__content h2 {
@@ -57,7 +98,8 @@ body {
         align-items: center;
         justify-content: flex-end; }
         .messanger__header__right .user-profile__name {
-          padding-right: 1rem; }
+          padding-right: 1rem;
+          color: #fff; }
         .messanger__header__right .user-profile__image {
           line-height: 5rem; }
           .messanger__header__right .user-profile__image img {
@@ -74,7 +116,8 @@ body {
     width: 20rem;
     border-right: 0.2px solid rgba(0, 0, 0, 0.329);
     background-color: #f3f3f3;
-    overflow-y: auto; }
+    overflow-y: auto;
+    overflow-x: hidden; }
   .messanger__content {
     flex-grow: 1;
     padding: 2rem;
@@ -121,10 +164,16 @@ body {
       font-size: 1.4rem;
       background-color: #2ecc71;
       border: none;
-      border-radius: 2rem;
+      border-radius: 50%;
       color: #fff;
-      padding: 0.8rem;
-      margin-left: 1rem; }
+      height: 3.4rem;
+      width: 3.4rem;
+      margin-left: 1rem;
+      cursor: pointer; }
+      .messanger__input__actions__send:active {
+        background-color: green; }
+      .messanger__input__actions__send:focus {
+        outline: none; }
   .messanger__sidebar-right {
     width: 30rem;
     border-left: 0.2px solid rgba(0, 0, 0, 0.329);
@@ -137,9 +186,9 @@ body {
 .channels__channel {
   display: flex;
   flex-direction: row;
-  margin: 2rem 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 0.3px solid rgba(0, 0, 0, 0.329); }
+  padding: 2rem 1rem 1rem 1rem;
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.329);
+  cursor: pointer; }
 
 .members {
   display: flex;
@@ -162,4 +211,104 @@ body {
   flex-grow: 1; }
   .user-info h2 {
     font-size: 1.4rem;
-    font-weight: 600; }
+    font-weight: 600;
+    white-space: nowrap; }
+
+.active {
+  background-color: rgba(0, 0, 0, 0.08); }
+
+.toolbar {
+  height: 5rem;
+  display: flex;
+  flex-direction: row; }
+  .toolbar span {
+    color: #fff;
+    cursor: pointer; }
+  .toolbar input {
+    height: 3rem;
+    line-height: 3rem;
+    margin: 1rem;
+    padding: 0.2rem;
+    border: none;
+    border-radius: 0.5rem; }
+
+.search-user {
+  position: absolute;
+  top: 5rem;
+  z-index: 1;
+  border: 0.4px solid rgba(0, 0, 0, 0.329);
+  border-top: 0 none; }
+  .search-user__list {
+    display: flex;
+    flex-direction: column; }
+    .search-user__list__user {
+      display: flex;
+      flex-direction: row;
+      padding: 0.8rem;
+      border-bottom: 0.4px solid rgba(0, 0, 0, 0.329);
+      cursor: pointer; }
+      .search-user__list__user:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
+      .search-user__list__user img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.2px solid rgba(0, 0, 0, 0.329);
+        margin-top: 1rem; }
+      .search-user__list__user h2 {
+        color: #2c3e50;
+        font-size: 1.4rem;
+        padding-left: 0.8rem; }
+
+.members-heading {
+  text-align: center; }
+
+.user-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.user-form {
+  line-height: 5rem; }
+  .user-form form {
+    display: flex;
+    flex-direction: row; }
+  .user-form__inputs {
+    display: flex;
+    flex-direction: column; }
+  .user-form__input {
+    padding: 0.3rem;
+    margin: 0.2rem;
+    border: none;
+    background-color: #fff;
+    color: #2c3e50; }
+
+.app-message {
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid #e74c3c;
+  border-radius: 1rem;
+  margin: 1rem 0; }
+  .app-message.error {
+    background-color: #e74c3c;
+    border-color: rgba(0, 0, 0, 0.329); }
+
+.user-menu {
+  position: absolute;
+  min-width: 20rem;
+  right: 0;
+  top: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.329);
+  border-top: 0 none;
+  background-color: #fff; }
+  .user-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .user-menu ul li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.329); }
+  .user-menu h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    display: block;
+    text-align: center; }
